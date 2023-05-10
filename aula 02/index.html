@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 02 - Html</title>
+  </head>
+  <body>
+    <header>
+      <h1>Desenvolvimento Web</h1>
+      <br />
+      <h2>Front-End</h2>
+    </header>
+    <main>
+      <section>
+        <article>
+          <h3>História do Html</h3>
+          <br />
+          <p>
+            O HTML foi proposto no início de 1990 e recebeu novas
+            funcionalidades ao longo do tempo visando atender às novas
+            exigências de comunicação e representação da informação. Atualmente
+            o padrão HTML 5 é amplamente utilizado, no momento já temos o padrão
+            HTML 5.3, lançado em janeiro de 2021.
+          </p>
+          <br />
+          <p>
+            Conheça mais sobre o HTML, visitando o site da Organização Mozilla,
+            neste site você vai encontrar um manual completo e detalhado com
+            exemplos:
+            <a>
+              href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+              Mozilla.org - HTML
+            </a>
+          </p>
+          <br />
+          <p>
+            Se desejar praticar e avançar mais em seus estudos o site W3Schools
+            oferece uma ferramenta para codificar e visualizar os resultados:
+            <a> href="https://www.w3schools.com/html/" W3Schools.com - HTML</a>
+          </p>
+          <p>
+            O objetivo do HTML é oferecer um padrão compreensível por nós
+            humanos e que pode ser interpretado pelos navegadores. Um dos
+            fatores responsáveis pelo sucesso do HTML é sua simplicidade de
+            desenvolvimento, pois exige apenas um editor de texto e um navegador
+            web. Além disso, ao navegar por um site qualquer na internet podemos
+            facilmente explorar o código HTML que está sendo apresentado. Para
+            explorar o código de uma página qualquer vamos utilizar o
+            <b>DevTools.</b>
+          </p>
+        </article>
+        <hr />
+        <article>
+          <h3>
+            O HTML é uma linguagem interpretada pelos navegadores. Mas o que
+            exatamente significa isso?
+          </h3>
+          <p>
+            Significa que todas as tags que desenvolvemos são executadas e geram
+            algum resultado para ser exibido ao usuário. Isso significa que as
+            tags não são “validadas”, nem mesmo são reportados erros caso
+            ocorram. Este é um fator que define o HTML como linguagem de
+            marcação e não como linguagem de programação. Uma linguagem de
+            programação passa por um processo de validação dos comandos, onde
+            cada um deles é executado podendo ou não gerar uma saída.
+          </p>
+          <p>
+            <u
+              >De forma resumida isso significa que quando nosso código HTML
+              estiver incorreto, não vai apresentar erro, simplesmente não vai
+              funcionar.</u
+            >
+          </p>
+
+          <p>
+            Existem diversos padrões que os programadores podem adotar, então é
+            fundamental você conheça bastante a linguagem HTML pois vai se
+            deparar com códigos desenvolvidos por outros programadores ao longo
+            de sua jornada profissional e antes mesmo de executar o código é
+            importante que você faça a validação do mesmo e entenda o que o
+            código deve realizar.
+          </p>
+        </article>
+        <hr />
+      </section>
+      <section>
+        <article>
+          <h3>Introdução à HTML</h3>
+          <p>
+            HTML é uma sigla para representar o termo
+            <b>Linguagem de Marcação de HiperTexto</b>, originado do inglês
+            <i>HyperText Markup Language.</i> Portanto a HTML é uma linguagem
+            para criar documentos com textos e outros elementos do meio digital,
+            tais como imagens, sons e vídeos. Todos estes elementos serão
+            ligados por meio de tags ou elementos, que vamos estudar nesta
+            unidade/disciplina. As <i>tags</i> são recursos fundamentais da
+            HTML. Abaixo segue exemplo de uma <i>tag.</i>
+          </p>
+          <figure>
+            <img src="./images/image1.JPG" width="200px" alt="foto_atributo" />
+          </figure>
+          <p>
+            &rarr; tag: etiqueta, rótulo ou marcação, exemplo &lt;img...&gt; é
+            um exemplo de tag de imagem
+          </p>
+          <p>
+            &rarr; atributo: característica que desejamos especificar,
+            geralmente um atributo é seguido por sinal de igualdade, exemplo
+            src=
+          </p>
+          <p>
+            &rarr; valor: geralmente fica entre aspas duplas. Em alguns casos, o
+            valor pode ficar entre aspas simples, dependendo do padrão adotado.
+            Vamos manter o padrão de aspas duplas.
+          </p>
+        </article>
+        <div style="border: 1px solid">
+          <h3>Notas importantes</h3>
+          <br />
+          <p>
+            &diams; Perceba que a tag inicia com o símbolo de menor, ou seja
+            &lt; . Observe também um sinal de maior no final, ou seja&gt;.
+          </p>
+          <br />
+          <p>
+            &diams; Todas as tags tem uma representação de finalização
+            opcionais. Veremos ao logo desta disciplina/unidade tais
+            particularidades.
+          </p>
+          <br />
+          <p>
+            &diams; Conheça mais tags HTML visitando este site:
+            <u>W3Schools.com</u>
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <article>
+          <h3>Estrutura Básica</h3>
+          <p>
+            Agora que já sabemos sobre tags, vamos explorar a estrutura básica
+            de um documento HTML.Um documento HTML deve ter a declaração da tag
+            inicial &lt;!DOCTYPE html&gt;, embora um documento HTML possa ser
+            interpretado sem a declaração, ela é altamente recomendada. Abaixo
+            segue <i>tag</i> DOCTYPE:
+          </p>
+          <figure>
+            <img src="./images/image2.JPG" width="400px" alt="foto_atributo" />
+          </figure>
+          <p>
+            A <i>tag</i> DOCTYPE pode ser escrita em minúscula, ou seja, não é
+            <i>case sensitive.</i> Algumas linguagens exigem a escrita usando
+            letras maiúsculas em certas situações e não funcionam caso
+            escrevemos uma letra minúscula no lugar de uma letra maiúscula, por
+            exemplo em JavaScript uma variável definida como pi é diferente de
+            uma variável definida como PI. Podemos afirmar que HTML não é
+            <i>case sensitive,</i> ou seja, tanto faz se escrevermos com letra
+            maiúscula ou minúscula, já a linguagem JavaScript é
+            <i>case sensitive.</i> Sempre que possível vamos obedecer ao padrão
+            e digitar corretamente as letras.
+          </p>
+
+          <p>
+            A tag &lt;html&gt; é a primeira a ser aberta, antes dela sempre
+            teremos apenas a tag !DOCTYPE. A tag html é fechada na linha 11, da
+            seguinte forma html. A tag img não fechamos, apenas abrimos. Mais
+            adiante veremos exemplos de tag img com fechamento.
+          </p>
+
+          <p>
+            A tag &lt;head&gt; é utilizada para definir configurações do
+            cabeçalho de nossa página tais como seu conteúdo, título,
+            palavras-chave e outras configurações que são processadas logo que a
+            página é carregada.
+            <br />Na tag &lt;head&gt; temos também inclusão de arquivos CSS e
+            JS.
+          </p>
+
+          <p>
+            Os títulos são representados dentro da tag &lt;title&gt; que por sua
+            vez estão dentro da tag &lt;head&gt; e são considerados pelos
+            motores de busca, isso significa que se você deve sempre criar
+            títulos relevantes e criativos para suas páginas.
+          </p>
+          <p>
+            Um documento HTML deve ter apenas uma tag &lt;html&gt;. Tanto a tag
+            &lt;head&gt; quanto a tag &lt;body&gt; são únicas por padrão.
+          </p>
+          <p>
+            A próxima tag que vamos explorar é &lt;body&gt;. Nela podemos
+            colocar tudo que desejamos exibir para nosso usuário, tais como
+            textos, figuras e links. No exemplo colocamos dentro da tag
+            &lt;body&gt; a tag &lt;p&gt; que representa um parágrafo no HTML e
+            tag &lt;img&gt; que utilizamos para adicionar uma imagem ao HTML.
+          </p>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <article>
+          <h3>Semântica HTML</h3>
+          <p>
+            As tags HTML devem sem utilizadas de forma que seja compreensível
+            para nós seres humanos e por computadores. Dar semântica a um
+            documento significa simplificar sua codificação e fazer com o
+            documento seja compreensível sem muito esforço. As páginas HTML são
+            interpretadas por outras aplicações, pois uma vez estando
+            “hospedadas” e acessíveis, qualquer aplicação pode abrir nossa
+            página e obter as informações que precisa. Para organizar as
+            informações de uma página existe um grupo e elementos, listados
+            abaixo:
+          </p>
+
+          <ul>
+            <li>&lt;header&gt;</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;article&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;figure&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;a&gt;</li>
+            <li>&lt;em&gt;</li>
+            <li>&lt;strong&gt;</li>
+            <li>&lt;cite&gt;</li>
+            <li>&lt;q&gt;</li>
+            <li>&lt;time&gt;</li>
+          </ul>
+          <p>
+            A descrição e utilização de cada uma dessas tags estará disponivel
+            em nosso
+            <a
+              href="https://docs.google.com/document/d/1IBilFERBMefMArgodoXTJKtBeMRFozNLeci-gGDdQ80/edit?usp=sharing"
+              target="_blank glossário html "
+              >Glossário HTML no Class.</a
+            >
+            Veja Exemplos para cada uma destas tags semânticas:
+          </p>
+        </article>
+        <img src="./images/main.JPG" alt="foto_atributo" />
+        <img src="./images/article.JPG" alt="foto_atributo" />
+        <img src="./images/aside.JPG" alt="foto_atributo" />
+        <img src="./images/figure.JPG" alt="foto_atributo" />
+        <img src="./images/header.JPG" alt="foto_atributo" />
+        <img src="./images/nav.JPG" alt="foto_atributo" />
+        <img src="./images/session.JPG" alt="foto_atributo" />
+        <img src="./images/strong-em.JPG" alt="foto_atributo" />
+        <img src="./images/HTML-semantico-completo.JPG" alt="foto_atributo" />
+      </section>
+    </main>
+    <br />
+    <footer style="text-align: center">
+      Atividade Prática Aula 02 - 15a Edição do Programa Starter 2023 -
+      <a href="https://www.growdev.com.br/" target="_blank">&copy;Growdev </a>
+    </footer>
+  </body>
+</html>
