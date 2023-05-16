@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segunda Tabela</title>
+  </head>
+  <style>
+    .Tabela1 {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: auto;
+    }
+    .topo {
+      text-align: center;
+      padding: 50px 20px;
+      border: 1px solid black;
+    }
+    .foot {
+      text-align: center;
+      padding: 20px 300px;
+      border: 1px solid black;
+    }
+    .nav {
+      text-align: center;
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 20px 80px;
+    }
+    .tmain {
+      text-align: center;
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 200px 300px;
+    }
+  </style>
+  <body>
+    <main>
+      <table class="Tabela1">
+        <thead>
+          <tr>
+            <th class="topo" colspan="4">Topo</th>
+          </tr>
+        </thead>
+        <tr>
+          <nav>
+            <td class="nav">Menu</td>
+          </nav>
+          <tmain>
+            <td class="tmain" colspan="2">Conteúdo</td>
+          </tmain>
+        </tr>
+        <tr>
+          <tfoot>
+            <td class="foot" colspan="4">Rodapé</td>
+          </tfoot>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

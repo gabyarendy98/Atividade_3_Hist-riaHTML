@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade Tabelas</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 20px;
+        width: 200px;
+      }
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <table>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr style="text-align: center">
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr style="text-align: right">
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+      </table>
+      <br />
+      <table style="margin-top: 30px">
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: center">4</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+      </table>
+      <br />
+      <table style="margin-top: 30px">
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td rowspan="3" style="text-align: center">3</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center">4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
