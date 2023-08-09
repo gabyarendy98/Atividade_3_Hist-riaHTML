@@ -11,7 +11,7 @@ app.get("/", function (req, res) {
   res.send("Bem vindo ao app!");
 });
 
-//propriedades de um usuário
+//propriedades de um usuáriohh
 //nome, e-mail (deve ser único), senha e identificador único
 const usuarios = [
   {
