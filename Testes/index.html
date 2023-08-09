@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form class="meuFormulario">
+      <h1>Formulário</h1>
+      <h2>Dados Pessoais</h2>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required /><br />
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required /><br />
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required /><br />
+
+      <label for="estado">Estado:</label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione um estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option></select
+      ><br />
+    </form>
+
+    <form class="meuFormulario">
+      <h2>Dados Profissionais</h2>
+      <h3>Natureza do Cargo:</h3>
+      <input type="radio" id="gerencia" name="cargo" value="gerencia" checked />
+      <label for="gerencia">Gerência</label><br />
+
+      <input type="radio" id="financeiro" name="cargo" value="financeiro" />
+      <label for="financeiro">Financeiro</label><br />
+
+      <input type="radio" id="recepcao" name="cargo" value="recepcao" />
+      <label for="recepcao">Recepção</label><br />
+
+      <input
+        type="radio"
+        id="administrativo"
+        name="cargo"
+        value="administrativo"
+      />
+      <label for="administrativo">Administrativo</label><br />
+
+      <input type="radio" id="juridico" name="cargo" value="juridico" />
+      <label for="juridico">Jurídico</label><br />
+
+      <h3>Áreas de Interesse:</h3>
+      <input type="checkbox" id="computacao" name="areas" value="computacao" />
+      <label for="computacao">Computação</label><br />
+
+      <input type="checkbox" id="biologia" name="areas" value="biologia" />
+      <label for="biologia">Biologia</label><br />
+
+      <input
+        type="checkbox"
+        id="meio_ambiente"
+        name="areas"
+        value="meio_ambiente"
+      />
+      <label for="meio_ambiente">Meio Ambiente</label><br />
+
+      <input type="checkbox" id="engenharia" name="areas" value="engenharia" />
+      <label for="engenharia">Engenharia</label><br />
+
+      <input type="checkbox" id="historia" name="areas" value="historia" />
+      <label for="historia">História</label><br />
+
+      <h3>Mini Currículo:</h3>
+      <textarea
+        id="mensagem"
+        name="mini_curriculo"
+        rows="6"
+        cols="50"
+      ></textarea
+      ><br />
+
+      <input type="button" value="Limpar" onclick="limparFormularios()" />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <input type="button" value="Limpar" onclick="limparFormularios()" />
+    <script>
+      function limparFormularios() {
+        const campos = document.querySelectorAll(
+          ".meuFormulario input, .meuFormulario textarea, .meuFormulario select"
+        );
+
+        campos.forEach(function (campo) {
+          if (campo.type === "checkbox" || campo.type === "radio") {
+            campo.checked = false;
+          } else {
+            campo.value = "";
+          }
+        });
+      }
+
+      // Adicionar o evento de submissão aos formulários
+      document.querySelectorAll(".meuFormulario").forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+          // Impedir o comportamento padrão de submissão do formulário
+          event.preventDefault();
+
+          // Capturar os dados preenchidos pelo usuário
+          const nome = form.querySelector("#nome").value;
+          const endereco = form.querySelector("#endereco").value;
+          const cidade = form.querySelector("#cidade").value;
+          const estado = form.querySelector("#estado").value;
+          const mensagem = form.querySelector("#mensagem").value;
+          // Exibir os dados no console.log
+          console.log("Nome: " + nome);
+          console.log("Endereço: " + endereco);
+          console.log("Cidade: " + cidade);
+          console.log("Estado: " + estado);
+          console.log("Mensagem: " + mensagem);
+        });
+      });
+    </script>
+  </body>
+</html>

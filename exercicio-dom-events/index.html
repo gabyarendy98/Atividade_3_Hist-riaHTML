@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios DOM Events / Javascript</title>
+
+    <style>
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Planilha de cálculos</h1>
+
+      <blockquote>
+        <p>Resumo da Tarefa</p>
+        <ol>
+          <li>Totalizar os campos 1+2+3 no campo 4</li>
+          <li>Totalizar os descontos 5+6 no campo 7</li>
+          <li>
+            Totalizar as receitas - despesas (campo 4 - campo 7) no campo 10
+          </li>
+        </ol>
+        <footer>Bom trabalho.</footer>
+      </blockquote>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="col" colspan="3">RECEITAS</th>
+          </tr>
+          <tr>
+            <th scope="col">1</th>
+            <td>Valor Base (R$)</td>
+            <td><input type="number" id="valor_base" value="0" /></td>
+          </tr>
+          <tr>
+            <th scope="col">2</th>
+            <td>Ajuda com transporte (R$)</td>
+            <td><input type="number" id="valor_transporte" value="0" /></td>
+          </tr>
+          <tr>
+            <th scope="col">3</th>
+            <td>Ajuda alimentação (R$)</td>
+            <td><input type="number" id="valor_alimentacao" value="0" /></td>
+          </tr>
+          <tr>
+            <th scope="col">4</th>
+            <th scope="col">Receita Total (R$)</th>
+            <th scope="col">
+              <input type="number" id="valor_receita" value="0" disabled />
+            </th>
+          </tr>
+          <tr>
+            <th scope="col" colspan="3">DESCONTOS</th>
+          </tr>
+          <tr>
+            <th scope="col">5</th>
+            <td>Desconto de Automóvel (R$)</td>
+            <td><input type="number" id="valor_automovel" value="0" /></td>
+          </tr>
+          <tr>
+            <th scope="col">6</th>
+            <td>Faltas (R$)</td>
+            <td><input type="number" id="faltas" value="0" /></td>
+          </tr>
+          <tr>
+            <th scope="col">7</th>
+            <th scope="col">Descontos Total (R$)</th>
+            <th scope="col">
+              <input type="number" id="valor_descontos" value="0" disabled />
+            </th>
+          </tr>
+          <tr>
+            <th scope="col" colspan="3">TOTAL</th>
+          </tr>
+          <tr>
+            <th scope="col">8</th>
+            <th scope="col">Total (R$)</th>
+            <th scope="col">
+              <input type="number" id="valor_total" value="0" disabled />
+            </th>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="height: 50px"></div>
+
+      <button id="btn_calcular">Calcular</button>
+    </div>
+
+    <script>
+      function calcularTotalReceitas() {
+        const valorBase = parseFloat(
+          document.getElementById("valor_base").value
+        );
+        const valorTransporte = parseFloat(
+          document.getElementById("valor_transporte").value
+        );
+        const valorAlimentacao = parseFloat(
+          document.getElementById("valor_alimentacao").value
+        );
+        const valorReceita = valorBase + valorTransporte + valorAlimentacao;
+        document.getElementById("valor_receita").value =
+          valorReceita.toFixed(2);
+      }
+
+      function calcularTotalDescontos() {
+        const valorAutomovel = parseFloat(
+          document.getElementById("valor_automovel").value
+        );
+        const faltas = parseFloat(document.getElementById("faltas").value);
+        const valorDescontos = valorAutomovel + faltas;
+        document.getElementById("valor_descontos").value =
+          valorDescontos.toFixed(2);
+      }
+
+      function calcularTotal() {
+        const valorReceita = parseFloat(
+          document.getElementById("valor_receita").value
+        );
+        const valorDescontos = parseFloat(
+          document.getElementById("valor_descontos").value
+        );
+        const valorTotal = valorReceita - valorDescontos;
+        document.getElementById("valor_total").value = valorTotal.toFixed(2);
+      }
+
+      document.getElementById("valor_base").addEventListener("input", () => {
+        calcularTotalReceitas();
+        calcularTotal();
+      });
+
+      document
+        .getElementById("valor_transporte")
+        .addEventListener("input", () => {
+          calcularTotalReceitas();
+          calcularTotal();
+        });
+
+      document
+        .getElementById("valor_alimentacao")
+        .addEventListener("input", () => {
+          calcularTotalReceitas();
+          calcularTotal();
+        });
+
+      document
+        .getElementById("valor_automovel")
+        .addEventListener("input", () => {
+          calcularTotalDescontos();
+          calcularTotal();
+        });
+
+      document.getElementById("faltas").addEventListener("input", () => {
+        calcularTotalDescontos();
+        calcularTotal();
+      });
+
+      document.getElementById("btn_calcular").addEventListener("click", () => {
+        calcularTotalReceitas();
+        calcularTotalDescontos();
+        calcularTotal();
+      });
+    </script>
+  </body>
+</html>

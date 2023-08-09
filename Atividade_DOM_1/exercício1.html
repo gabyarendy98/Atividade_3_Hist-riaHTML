@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 1</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="botaoClick()">CLIQUE AQUI PARA MUDAR O TEXTO</button>
+      <p>Aqui vai aparecer alguma coisa...</p>
+    </div>
+    <script>
+      let nomeDoUsuario = prompt("Digite o nome do usuário");
+      let textoDigitado = `E aí ${nomeDoUsuario}, você está deixando o seu site dinâmico.`;
+
+      const text = document.querySelector("p");
+
+      function botaoClick() {
+        text.innerHTML = textoDigitado;
+
+      }
+    </script>
+  </body>
+</html>
